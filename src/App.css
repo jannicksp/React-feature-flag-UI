@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'industry';
+  src: local('industry'), url(../public/Industry-BookItalic.woff) format('woff');
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+body{
+ background-color: #0d0d0f;
+ font-family: industry;
+ color: white;
+}
+
+.flex{
+  display: flex;
+  
+}
+.flex div{
+  width: 95%;
+}
