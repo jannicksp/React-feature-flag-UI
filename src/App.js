@@ -1,16 +1,17 @@
 import React from 'react';
+import { useState } from 'react';
 import ToggleSwitch from './ToggleSwitch/ToggleSwitch'
 import ToggleSwitchGroup from './ToggleswitchGroup/ToggleSwitchGroup';
 import './App.css';
 import ToggleSwitchNumeric from './ToggleSwitchNumeric/ToggleSwitch';
 
 function App() {
+  const [visible, setVisible] = useState(false);  // visibility state
   return (
     <>
       <h1> General</h1>
       <div className="flex">
         <div >
-
           <ToggleSwitch  value="Case Management"/>
           <ToggleSwitch value="Notification"/>
         </div>
@@ -23,21 +24,23 @@ function App() {
           <ToggleSwitch value="Traffic Cameras"/>
         </div>
       </div>
-     
-
       <div className="flex">
         <div>
           <ToggleSwitchGroup headline="Settings" value="Audit Log" onClick={selects2}/>
           <ToggleSwitch value="Users" name="2"/>
         </div>
         <div>
-      
           <ToggleSwitchGroup headline="Settings" value="Audit log" onClick={selects1}  />
+          <span onClick={() => setVisible(!visible)}>{visible ? '↑' : '↓'} </span>
+          {visible && 
+          <div>
           <ToggleSwitch  value="users"  name="1"/>
           <ToggleSwitch  value="users add"  name="1"/>
           <ToggleSwitch  value="user delete"  name="1"/>
           <ToggleSwitch  value="user edit"  name="1"/>
           <ToggleSwitchNumeric  value="max users"  name="1"/>
+          </div>
+          }
         </div>
         <div>
           <ToggleSwitchGroup headline="Alerts" value="alert manager"/>
