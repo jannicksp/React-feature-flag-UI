@@ -5,7 +5,6 @@ class ToggleSwitchNumeric extends Component {
     render() {
         const { headline, checked, value, onClick, name} = this.props
       return (
-          
         <div>
             <h2> {headline}</h2>
             <div className="switch-box">

@@ -9,9 +9,7 @@ class ToggleSwitch extends Component {
         <div>
             <h2> {headline}</h2>
             <div className="switch-box">
-
             <label htmlFor="text"> {value}</label>
-            {/* { <input type="number" id="quantity" name="quantity" min="1" max="10" value="10"/> } */}
             <label className="switch" >
                 <input   onClick={onClick} name={name} type="checkbox" checked={checked} />
                 <span className="slider round"></span>

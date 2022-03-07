@@ -3,7 +3,7 @@ import { useState } from 'react';
 import ToggleSwitch from './ToggleSwitch/ToggleSwitch'
 import ToggleSwitchGroup from './ToggleswitchGroup/ToggleSwitchGroup';
 import './App.css';
-import ToggleSwitchNumeric from './ToggleSwitchNumeric/ToggleSwitch';
+import ToggleSwitchNumeric from './ToggleSwitchNumeric/ToggleSwitchNumeric';
 
 function App() {
   const [visible, setVisible] = useState(false);  // visibility state
@@ -54,7 +54,7 @@ function App() {
 function selects1(){  
   var ele=document.getElementsByName("1");  
   for(var i=0; i<ele.length; i++){  
-      if(ele[i].type=='checkbox')  
+      if(ele[i].type==='checkbox')
       if(ele[i].checked===false){
         ele[i].checked=true; 
       } 
@@ -67,7 +67,7 @@ function selects1(){
 function selects2(){  
   var ele=document.getElementsByName("2");  
   for(var i=0; i<ele.length; i++){  
-      if(ele[i].type=='checkbox')  
+      if(ele[i].type==='checkbox')
       if(ele[i].checked===false){
         ele[i].checked=true; 
       } 
